@@ -1,0 +1,3 @@
+#禁止目录访问
+order allow,deny
+deny from all
