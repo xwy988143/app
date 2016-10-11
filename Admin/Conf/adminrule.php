@@ -52,6 +52,7 @@ return array(
             array('name'=>'编辑员工信息','action'=>'add'),
             array('name'=>'显示员工信息','action'=>'list'),
             array('name'=>'员工详情','action'=>'read'),
+            array('name'=>'修改详情','action'=>'edit'),
         )),
     )
 );

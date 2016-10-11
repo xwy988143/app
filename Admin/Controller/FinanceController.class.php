@@ -29,4 +29,31 @@ class FinanceController extends CommonController {
         $this->assign('data',$data);
         $this->display('detail');
     }
+
+    public function edit()
+    {
+        if (IS_POST) {
+
+            $map['id'] = $_POST['id'];
+            $data['salary'] = I('post.salary');
+            $data['profit'] = I('post.profit');
+            $res = M('stuff')->where($map)->save($data);
+            if ($res) {
+                success();
+            }else{
+                failed();
+            }
+        }else{
+
+            $id = $_GET['id'];
+            $map['id'] = $id;
+            $stuff = M('stuff')->where($map)->find();
+            foreach ($stuff as $key => $value) {
+                $data[$key]['sex'] = $value['sex']=='0'? "女" : "男";
+                //$data[$key]['total_money'] = $value['profit'] + $value['salary'];
+            }
+            $this->assign('data',$stuff);
+            $this->display('edit');
+        }
+    }
 }

@@ -32,7 +32,7 @@
                             <td>{$vo.profit}</td>   
                             <td>{$vo.salary}</td>   
                             <td>{$vo.total_money}</td>
-                            <td></td>
+                            <td><a href="{:U('Finance/edit?id='.$vo['id'])}">修改信息</a></td>
                         </tr>
                         </volist>
                     </tbody>
