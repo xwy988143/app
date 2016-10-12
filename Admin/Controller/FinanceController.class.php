@@ -37,10 +37,13 @@ class FinanceController extends CommonController {
             $map['id'] = $_POST['id'];
             $data['salary'] = I('post.salary');
             $data['profit'] = I('post.profit');
+            $data['total_money'] = $data['salary'] + $data['profit'];
             $res = M('stuff')->where($map)->save($data);
             if ($res) {
+
                 success();
             }else{
+                
                 failed();
             }
         }else{

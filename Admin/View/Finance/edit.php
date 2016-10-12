@@ -2,7 +2,7 @@
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">{$data?'更新后台登陆账号':'创建后台登陆账号'}</h3>
+                <h3 class="box-title">编辑财务信息</h3>
             </div>
             <div class="box-body">
         <form action="{:U('Finance/edit')}" class="form-horizontal well-lg">

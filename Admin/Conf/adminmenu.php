@@ -21,6 +21,9 @@ return array(
             array('id'=>'1','title'=>'编辑信息','href'=>'Admin/Finance/add'),
             array('id'=>'1','title'=>'显示信息','href'=>'Admin/Finance/list'),
         )),
+        array('id'=>'6','title'=>'税务统计','icon'=>'fa-wrench','href'=>'#','child'=>array(
+            array('id'=>'1','title'=>'显示信息','href'=>'Admin/Tax/list'),
+        )),
         array('id'=>'5','title'=>'信息管理','icon'=>'fa-lightbulb-o','href'=>'#','child'=>array(
                 array('id'=>'1','title'=>'公告列表','href'=>'Admin/Publish/lists'),
                 array('id'=>'5','title'=>'公告发布','href'=>'Admin/Publish/add'),
