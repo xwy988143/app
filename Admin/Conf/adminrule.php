@@ -54,5 +54,8 @@ return array(
             array('name'=>'员工详情','action'=>'read'),
             array('name'=>'修改详情','action'=>'edit'),
         )),
+        array('name'=>'税务统计','controller'=>'Finance','data'=>array(
+            array('name'=>'税务信息','action'=>'index'),
+        )),
     )
 );
