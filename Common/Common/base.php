@@ -196,3 +196,28 @@ function path_deny($path = '')
         file_put_contents($path . ' . htaccess', $content);
     }
 }
+
+//计算个人所得税
+function taxCal($salary =' ')
+{
+    switch($salary) 
+    {
+     case $score>=0 && $score<=1500:
+      return $salary * 0.03 - 0;
+      break;
+     case $score>1500 && $score<=4500:
+      return $salary * 0.1 - 105;
+      break;
+     case $score>4500 && $score<=9000:
+      return $salary * 0.2 - 555;
+      break;
+     case $score>9000 && $score<=35000:
+      return $salary * 0.25 - 1005;
+      break;
+     case $score>35000 && $score<=55000:
+      return $salary * 0.3 - 2755;
+      break;
+     default:
+      return false;
+    }
+}
