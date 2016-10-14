@@ -57,6 +57,8 @@ return array(
         array('name'=>'税务统计','controller'=>'Tax','data'=>array(
             array('name'=>'税务信息','action'=>'index'),
             array('name'=>'科室个税信息','action'=>'list'),
+            array('name'=>'全体科室个税信息','action'=>'allList'),
+            array('name'=>'阅读科室信息','action'=>'read'),
         )),
     )
 );

@@ -20,7 +20,7 @@
                             <td>绩效</td>
                             <td>工资</td>
                             <td>收入</td>
-                            <td></td>
+                            <td>个人所得税</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,12 +32,11 @@
                             <td>{$vo.profit}</td>   
                             <td>{$vo.salary}</td>   
                             <td>{$vo.total_money}</td>
-                            <td><input class="ids" value="{$vo['id']}" type="checkbox"></td>
+                            <td>{$vo.tax}</td>
                         </tr>
                         </volist>
                     </tbody>
                 </table>
-                <a href="javascript:;" onclick="formSubmit.dels(this)" d-url="{:U('Stuff/Delete')}" class="btn btn-default btn-xs" />批量删除</a>
             </div>
         </div>
     </div>
