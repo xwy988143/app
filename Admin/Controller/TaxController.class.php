@@ -39,4 +39,16 @@ class TaxController extends CommonController {
         } 
     }
 
+    public function read()
+    {
+        $map['a_id'] = $_GET['id']; //获取科室的id号
+        $data = M('stuff')->where($map)->select();
+        foreach ($data as $key => $value) {
+            $data[$key]['sex'] = $value['sex']=='0'? "女" : "男";
+            $data[$key]['tax'] = taxCal($value['total_money']);
+        }   
+        $this->assign('data',$data);
+        $this->display();
+    }
+
 }
