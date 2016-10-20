@@ -32,12 +32,12 @@
                 <input type="password" name="password" value="{$password}" class="form-control" placeholder="密码">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
-            <if condition="$GLOBALS['systemconfig']['verify']">
+<!--             <if condition="$GLOBALS['systemconfig']['verify']">
                 <div class="form-group input-group" style="width:100%">
                     <input type="text" name="verify" class="form-control" placeholder="验证码" style="border-right:0">
                     <span class="input-group-addon" style="padding:0;border:0;width:100px;"><img src="{:U('Admin/Login/verify')}" style="width:100%;height:34px;border:1px solid #d2d6de;" onclick="this.src='{:U('Admin/Login/verify')}'" id="code" /></span>
                 </div>
-            </if>
+            </if> -->
             <button type="button" class="btn btn-primary btn-block btn-flat">登陆</button>
         </form>
         <a href="{:U('passwordForgot')}" class="password-forgot">忘记密码?</a>

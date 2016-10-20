@@ -1,4 +1,4 @@
-<?php
+ <?php
 return array(
     'URL_CASE_INSENSITIVE' => true,
     'URL_MODEL' => 2,

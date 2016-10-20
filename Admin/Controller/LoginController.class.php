@@ -23,11 +23,11 @@ class LoginController extends Controller
             $password = I('post.password') OR failed('请输入密码');
             
             //验证码
-            if($GLOBALS['systemconfig']['verify']){
-                $code = I('post.verify') OR failed('请输入验证码');
-                $verify = new \Think\Verify();
-                if ($verify->check($code) === false) failed('验证码错误');
-            }
+            // if($GLOBALS['systemconfig']['verify']){
+            //     $code = I('post.verify') OR failed('请输入验证码');
+            //     $verify = new \Think\Verify();
+            //     if ($verify->check($code) === false) failed('验证码错误');
+            // }
 
             $password = password_md5($password);
 
